@@ -98,78 +98,64 @@ function displayData(datas){
             }
         }
 
-        // Events des Logiciels, création des fonds de couleur selon le logiciel inscrit
+        // Events des Logiciels, création des fonds
         function logicielDesign(datas){
                     
                     for(i in datas){
-                        // Je sélectionne le parent
                         const parent = document.querySelectorAll ('.logiciel-items')
                         const text = document.querySelectorAll('.text')
-                        
+
                         for ( let i = 0 ; i < parent.length ; i++){
+
                              if(datas[i].logiciel === "AI"){
                                 parent[i].innerHTML = `         
-                                <div class="fond ai">
+                                <div class="fond">
+                                <p class="text">${datas[i].logiciel}</p>
+                                </div>
+                                `;
+                                const fond = document.querySelectorAll('.fond')
+                                fond[i].classList.add('ai')
+
+                            }else if (datas[i].logiciel === "PS"){
+                                parent[i].innerHTML = `         
+                                <div class="fond">
                                 <p class="text">${datas[i].logiciel}</p>
                                 </div>
                                 `;
 
-                            }else if (datas[i].logiciel === "PS"){
-                                parent[i].innerHTML = `         
-                                <div class="fond ps">
-                                <p class="text">${datas[i].logiciel}</p>
-                                </div>
-                                `;
+                                const fond = document.querySelectorAll('.fond')
+                                fond[i].classList.add('ps')
                             } else if(datas[i].logiciel === "Affinity Designer"){
                                 parent[i].innerHTML = `         
-                                <div class="fond afdesigner">
+                                <div class="fond">
                                 <p class="text">${datas[i].logiciel}</p>
                                 </div>
                                 `;
+
+                                const fond = document.querySelectorAll('.fond')
+                                fond[i].classList.add('afdesigner')
+
                             }else if(datas[i].logiciel === "Affinity Publisher"){
                                 parent[i].innerHTML = `         
                                 <div class="fond afpublisher">
                                 <p class="text">${datas[i].logiciel}</p>
                                 </div>
                                 `;
-        
+                                const fond = document.querySelectorAll('.fond')
+                                fond[i].classList.add('afpublisher')
+
                             }else if(datas[i].logiciel === "In"){
                                 parent[i].innerHTML = `         
-                                <div class="fond in">
+                                <div class="fond">
                                 <p class="text">${datas[i].logiciel}</p>
                                 </div>
                                 `;
+
+                                const fond = document.querySelectorAll('.fond')
+                                fond[i].classList.add('in')
                             }else{
                                 parent[i].classList.add('hidden')
                             }
-/*
-                            //Condition si plusieurs éléments
-                        if(datas[i].logiciel.length > 1 && datas[i].logiciel.length < 3){
-                            parent[i].innerHTML = `         
-                            <div class="fond">
-                            <p class="text">${datas[i][0].logiciel}</p>
-                            </div>
-
-                            <div class="fond">
-                            <p class="text">${datas[i][1].logiciel}</p>
-                            </div>
-                            `;
-                        } else if (datas[i].logiciel.length > 2 && datas[i].logiciel.length < 4){
-                            parent[i].innerHTML = `         
-                            <div class="fond">
-                            <p class="text">${datas[i][0].logiciel}</p>
-                            </div>
-
-                            <div class="fond">
-                            <p class="text">${datas[i][1].logiciel}</p>
-                            </div>
-
-                            <div class="fond">
-                            <p class="text">${datas[i][2].logiciel}</p>
-                            </div>
-                            `;
-                        }
-                        */
                     }                    
             }
         }
