@@ -1,7 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .featured {
@@ -19,18 +20,36 @@
 }
 
 .logiciels-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-basis: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .fond {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: gray;
   padding: 25px;
   width: 30px;
@@ -39,11 +58,11 @@
 }
 
 .ai {
-  background-color: orange !important;
+  background-color: orange;
 }
 
 .ps {
-  background-color: blue !important;
+  background-color: blue;
   padding: 25px;
 }
 
@@ -57,4 +76,21 @@
 
 .in {
   background-color: red;
-}/*# sourceMappingURL=main.css.map */
+}
+
+.tagFond {
+  width: 60px;
+  height: auto;
+  background-color: grey;
+  color: white;
+  padding: 4px;
+}
+
+.logo {
+  background-color: green;
+}
+
+.web {
+  background-color: lightseagreen;
+}
+/*# sourceMappingURL=main.css.map */

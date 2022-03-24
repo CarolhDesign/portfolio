@@ -3,15 +3,15 @@
         "id": 0,
         "title":"Je suis un titre",
         "type":"Logo",
-        "isLiked":"false",
-        "isNew": "true",
+        "isLiked":"true",
+        "isNew": "false",
         "logiciel": "AI",
         "image":"dd"
         },
         {
             "id": 1,
             "title":"Je suis un titre",
-            "type":"Logo",
+            "type":"Web",
             "isLiked":"false",
             "isNew": "true",
             "logiciel":"PS",

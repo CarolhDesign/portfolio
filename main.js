@@ -90,7 +90,7 @@ function displayData(datas){
                 hearts[i].addEventListener('click', () => {
                         hearts[i].classList.toggle('fa-solid')
 
-                        if(datas[i].isLiked === "true" || localStorage.getItem('isLiked' + [i], true)){
+                        if(datas[i].isLiked === "true"){
                             hearts[i].classList.toggle('fa-regular')
                         }
                 })
@@ -160,7 +160,47 @@ function displayData(datas){
             }
         }
 
+        function designTag(datas){
+            for(data in datas){
+                const types = document.querySelectorAll('.tag')
+                for (let i = 0; i < types.length; i++) {
+
+                    types[i].innerHTML = `
+                    <div class="tagFond">
+                        <p class="tagName">${datas[i].type}</p>
+                    </div>
+                    `
+
+                                    //Condition design 
+
+                if(datas[i].type == "Logo"){
+                    types[i].innerHTML = `
+                    <div class="tagFond">
+                        <p class="tagName">${datas[i].type}</p>
+                    </div>
+                    `
+                    const fond = document.querySelectorAll('.tagFond')
+                    fond[i].classList.add('logo')
+
+                } else if (datas[i].type == "Web"){
+                    types[i].innerHTML = `
+                    <div class="tagFond">
+                        <p class="tagName">${datas[i].type}</p>
+                    </div>
+                    `
+                    const fond = document.querySelectorAll('.tagFond')
+                    fond[i].classList.add('web')
+                }
+
+                }
+
+
+
+            }
+        }
+
         verifier(datas)
+        designTag(datas)
         liked(datas)
         logicielDesign(datas)
 
@@ -171,11 +211,7 @@ function displayData(datas){
 
 
 /*
-
-
-    // Créer fonction TAG
-    // Créer fonction Logiciel Item + vérifier condition
-    // Créer fonction Vérifier condition pour logiciel Item
+    // Créer fonction Vérifier condition pour logiciel Item + 2
 
 
     */
