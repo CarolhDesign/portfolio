@@ -2,10 +2,10 @@
     {
         "id": 0,
         "title":"Je suis un titre",
-        "type":"Logo",
-        "isLiked":"true",
-        "isNew": "false",
-        "logiciel": "AI",
+        "type":"Web",
+        "isLiked":"false",
+        "isNew": "true",
+        "logiciel": "In",
         "image":"dd"
         },
         {
@@ -16,5 +16,14 @@
             "isNew": "true",
             "logiciel":"PS",
             "image":"dd"
-            }
+            },
+            {
+                "id": 2,
+                "title":"Je suis un titre",
+                "type":"Logo",
+                "isLiked":"false",
+                "isNew": "true",
+                "logiciel":"Affinity Designer",
+                "image":"dd"
+                }
 ]

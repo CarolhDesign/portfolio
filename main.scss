@@ -4,12 +4,36 @@
     box-sizing: border-box;
 }
 
+.folio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+.portfolio-item{
+    margin-top:2%;
+    border: 2px solid black;
+    width: 200px;
+    padding:2%;
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 .featured{
     background-color: red;
     color:white;
     padding:2%;
 }
 
+.blocNew{
+    font-size:12px;
+}
 .hidden{
     visibility: hidden;
 }
@@ -74,4 +98,11 @@
 
 .web{
     background-color: lightseagreen;
+}
+
+.portfolio-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
