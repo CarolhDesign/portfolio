@@ -107,7 +107,8 @@ function displayData(datas){
 
                         for ( let i = 0 ; i < parent.length ; i++){
 
-                             if(datas[i].logiciel === "AI"){
+                             if(datas[i].logiciel === "AI")
+                             {
                                 parent[i].innerHTML = `         
                                 <div class="fond">
                                 <p class="text">${datas[i].logiciel}</p>
@@ -116,7 +117,9 @@ function displayData(datas){
                                 const fond = document.querySelectorAll('.fond')
                                 fond[i].classList.add('ai')
 
-                            }else if (datas[i].logiciel === "PS"){
+                            }
+                            else if (datas[i].logiciel === "PS")
+                            {
                                 parent[i].innerHTML = `         
                                 <div class="fond">
                                 <p class="text">${datas[i].logiciel}</p>
@@ -125,7 +128,9 @@ function displayData(datas){
 
                                 const fond = document.querySelectorAll('.fond')
                                 fond[i].classList.add('ps')
-                            } else if(datas[i].logiciel === "Affinity Designer"){
+                            } 
+                            else if(datas[i].logiciel === "Affinity Designer")
+                            {
                                 parent[i].innerHTML = `         
                                 <div class="fond">
                                 <p class="text">${datas[i].logiciel}</p>
@@ -135,7 +140,8 @@ function displayData(datas){
                                 const fond = document.querySelectorAll('.fond')
                                 fond[i].classList.add('afdesigner')
 
-                            }else if(datas[i].logiciel === "Affinity Publisher"){
+                            }else if(datas[i].logiciel === "Affinity Publisher")
+                            {
                                 parent[i].innerHTML = `         
                                 <div class="fond afpublisher">
                                 <p class="text">${datas[i].logiciel}</p>
@@ -144,7 +150,9 @@ function displayData(datas){
                                 const fond = document.querySelectorAll('.fond')
                                 fond[i].classList.add('afpublisher')
 
-                            }else if(datas[i].logiciel === "In"){
+                            }
+                            else if(datas[i].logiciel === "In")
+                            {
                                 parent[i].innerHTML = `         
                                 <div class="fond">
                                 <p class="text">${datas[i].logiciel}</p>
@@ -153,7 +161,9 @@ function displayData(datas){
 
                                 const fond = document.querySelectorAll('.fond')
                                 fond[i].classList.add('in')
-                            }else{
+                            }
+                            else
+                            {
                                 parent[i].classList.add('hidden')
                             }
                     }                    
@@ -171,7 +181,7 @@ function displayData(datas){
                     </div>
                     `
 
-                                    //Condition design 
+                //Condition design 
 
                 if(datas[i].type == "Logo"){
                     types[i].innerHTML = `
@@ -212,6 +222,6 @@ function displayData(datas){
 
 /*
     // Créer fonction Vérifier condition pour logiciel Item + 2
-
-
-    */
+    // Créer fonction condition pour type > 2 et affichage
+    //Faire LocalStorage, et après Firebase
+ */
