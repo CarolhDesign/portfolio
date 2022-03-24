@@ -1,8 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .featured {
@@ -18,4 +17,44 @@
 .visible {
   visibility: visible;
 }
-/*# sourceMappingURL=main.css.map */
+
+.logiciels-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis: 100%;
+}
+
+.fond {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  padding: 25px;
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
+.ai {
+  background-color: orange !important;
+}
+
+.ps {
+  background-color: blue !important;
+  padding: 25px;
+}
+
+.afpublisher {
+  background-color: orangered;
+}
+
+.afdesigner {
+  background-color: darkblue;
+}
+
+.in {
+  background-color: red;
+}/*# sourceMappingURL=main.css.map */

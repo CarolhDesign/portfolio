@@ -17,3 +17,46 @@
 .visible{
     visibility: visible;
 }
+
+.logiciels-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+.fond{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    padding: 25px;
+    width: 30px;
+    height:30px;
+    color:white;
+}
+.ai{
+    background-color: orange!IMPORTANT;
+
+}
+
+.ps{
+    background-color: blue!IMPORTANT;
+    padding: 25px;
+
+}
+
+.afpublisher{
+    background-color: orangered;
+}
+
+.afdesigner{
+    background-color: darkblue;
+
+}
+
+.in{
+    background-color: red;
+}

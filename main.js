@@ -69,8 +69,9 @@ function displayData(datas){
                 headers[i].classList.add('hidden')
         }
     }
-        }//Fin functioin verifier
+        }
 
+        // Events des boutons " Like "
         function liked(datas){
             const hearts = document.querySelectorAll(".heart");
             for ( let i = 0 ; i < hearts.length ; i++){
@@ -97,30 +98,81 @@ function displayData(datas){
             }
         }
 
+        // Events des Logiciels, création des fonds de couleur selon le logiciel inscrit
         function logicielDesign(datas){
+                    
                     for(i in datas){
-                        if(datas[i].logiciel === "AI"){
-                            console.log("AI")
+                        // Je sélectionne le parent
+                        const parent = document.querySelectorAll ('.logiciel-items')
+                        const text = document.querySelectorAll('.text')
+                        
+                        for ( let i = 0 ; i < parent.length ; i++){
+                             if(datas[i].logiciel === "AI"){
+                                parent[i].innerHTML = `         
+                                <div class="fond ai">
+                                <p class="text">${datas[i].logiciel}</p>
+                                </div>
+                                `;
 
-                    } else if (datas[i].logiciel === "PS"){
-                        console.log("PS")
-                    } else if(datas[i].logiciel === "Affinity Designer"){
-                        console.log("Affinity")
+                            }else if (datas[i].logiciel === "PS"){
+                                parent[i].innerHTML = `         
+                                <div class="fond ps">
+                                <p class="text">${datas[i].logiciel}</p>
+                                </div>
+                                `;
+                            } else if(datas[i].logiciel === "Affinity Designer"){
+                                parent[i].innerHTML = `         
+                                <div class="fond afdesigner">
+                                <p class="text">${datas[i].logiciel}</p>
+                                </div>
+                                `;
+                            }else if(datas[i].logiciel === "Affinity Publisher"){
+                                parent[i].innerHTML = `         
+                                <div class="fond afpublisher">
+                                <p class="text">${datas[i].logiciel}</p>
+                                </div>
+                                `;
+        
+                            }else if(datas[i].logiciel === "In"){
+                                parent[i].innerHTML = `         
+                                <div class="fond in">
+                                <p class="text">${datas[i].logiciel}</p>
+                                </div>
+                                `;
+                            }else{
+                                parent[i].classList.add('hidden')
+                            }
+/*
+                            //Condition si plusieurs éléments
+                        if(datas[i].logiciel.length > 1 && datas[i].logiciel.length < 3){
+                            parent[i].innerHTML = `         
+                            <div class="fond">
+                            <p class="text">${datas[i][0].logiciel}</p>
+                            </div>
 
-                    }else if(datas[i].logiciel === "Affinity Publisher"){
-                        console.log("Affinity Pub")
+                            <div class="fond">
+                            <p class="text">${datas[i][1].logiciel}</p>
+                            </div>
+                            `;
+                        } else if (datas[i].logiciel.length > 2 && datas[i].logiciel.length < 4){
+                            parent[i].innerHTML = `         
+                            <div class="fond">
+                            <p class="text">${datas[i][0].logiciel}</p>
+                            </div>
 
-                    }else if(datas[i].logiciel === "InDesign"){
-                        console.log("Indesign")
+                            <div class="fond">
+                            <p class="text">${datas[i][1].logiciel}</p>
+                            </div>
 
-                    }else{
-                        console.log("Rien")
-
-                    }
+                            <div class="fond">
+                            <p class="text">${datas[i][2].logiciel}</p>
+                            </div>
+                            `;
+                        }
+                        */
+                    }                    
             }
         }
-
-  
 
         verifier(datas)
         liked(datas)
