@@ -76,6 +76,7 @@
           align-items: center;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  position: relative;
 }
 
 .fond {
@@ -93,6 +94,9 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: gray;
+  position: relative;
+  bottom: 0;
+  right: 0;
   padding: 25px;
   width: 30px;
   height: 30px;

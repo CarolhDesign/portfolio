@@ -49,9 +49,11 @@ function displayData(datas){
         // On vérifie si isNew est true et on affiche le code
         function verifier(datas){
             const headers = document.querySelectorAll(".new-item");
-
+            const box = document.querySelectorAll('.portfolio-item')
             for ( let i = 0 ; i < headers.length ; i++){
 
+
+            box[i].style.background = `url('${datas[i].image}')`
             if(datas[i].isNew === "true"){
 
                 headers[i].innerHTML = `         
