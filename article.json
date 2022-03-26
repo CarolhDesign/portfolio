@@ -2,16 +2,16 @@
     {
         "id": 0,
         "title":"Je suis un titre",
-        "type":"Web",
-        "isLiked":"false",
-        "isNew": "true",
-        "logiciel": "In",
+        "type":"Vectoriel",
+        "isLiked":"true",
+        "isNew": "false",
+        "logiciel": "AI",
         "image":"https://www.creativefabrica.com/wp-content/uploads/2020/07/06/Illustrations-background-Nature-landsc-Graphics-4554836-1.jpg"
         },
         {
             "id": 1,
             "title":"Je suis un titre",
-            "type":"Web",
+            "type":"Logo",
             "isLiked":"false",
             "isNew": "true",
             "logiciel":"PS",

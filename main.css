@@ -127,8 +127,8 @@
 .tagFond {
   width: 60px;
   height: auto;
-  background-color: grey;
   color: white;
+  background-color: grey;
   padding: 4px;
 }
 
@@ -138,6 +138,10 @@
 
 .web {
   background-color: lightseagreen;
+}
+
+.vector {
+  background-color: cornflowerblue;
 }
 
 .portfolio-footer {
