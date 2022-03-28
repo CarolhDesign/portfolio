@@ -1,21 +1,21 @@
 [
     {
         "id": 0,
-        "title":"Je suis un titre",
+        "title":"Bald Woman",
         "type":"Vectoriel",
         "isLiked":"true",
-        "isNew": "false",
+        "isNew": "true",
         "logiciel": "AI",
-        "image":"https://www.creativefabrica.com/wp-content/uploads/2020/07/06/Illustrations-background-Nature-landsc-Graphics-4554836-1.jpg"
+        "image":"images/1.jpg"
         },
         {
             "id": 1,
             "title":"Je suis un titre",
             "type":"Logo",
             "isLiked":"false",
-            "isNew": "true",
+            "isNew": "false",
             "logiciel":"PS",
-            "image":"dd"
+            "image":"http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcQQ8vvOU82XpxdeMZMA8SMdddCXafmV2Ekc1MlCvXbl4tkZlT-6_IMEe8kQZsEKhBdSjAyg7ub3ORRcbVvM3x4"
             },
             {
                 "id": 2,
@@ -24,6 +24,6 @@
                 "isLiked":"false",
                 "isNew": "true",
                 "logiciel":"Affinity Designer",
-                "image":"dd"
+                "image":"http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRtsun2B92hWkPymEN2lImcwCO7YhH5Y-so0CS0VjhPCKzp1tGsxcLKAugBOM0O1ma1SW8Z7RnXFOE-XnbMEVM"
                 }
 ]

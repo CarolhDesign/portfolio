@@ -7,21 +7,21 @@ fetch(url)
 
 //let ramdom = 0
 
-
-
 document.querySelector('body').addEventListener('click', (e) => {
            
     if(e.target.classList.contains('heart')){
      e.target.classList.toggle('fa-solid')
      e.target.classList.toggle('fa-regular')
     
-    }  })
+    }  
+});
  
 
 function displayData(datas){
     const ul = document.querySelector('.folio')
 
     for(data in datas){
+
         // On créer une boucle for in pour parcourir les index du tableau d'objet.
         // Ensuite, on créer les variables pour une meilleure accessibilité et lisibilité du code
         let titre = datas[data].title
@@ -71,13 +71,16 @@ function displayData(datas){
         <li class="portfolio-item">
 
         <div id="header">
-            <div class="new-item ${visible} ">
-                  <div class="blocNew">
+            <div class="new-item">
+                  <div class="blocNew ${visible}">
                         <h2>Nouveauté</h2>
                   </div>
-            </div>
-            <div class="like ">
-                <div class="icon"><i class="heart ${displayLiked} fa-heart"></i></div>
+
+                  <div class="tag">
+                  <div class="tagFond ${tag}">
+                      <p class="tagName">${type}</p>
+                  </div>
+                  </div>
             </div>
         </div>
         <div class="portfolio-content">
@@ -85,11 +88,9 @@ function displayData(datas){
             <div class="title">${titre}</div>
         </div>
         <div class="portfolio-footer">
-            <div class="tag">
-            <div class="tagFond ${tag}">
-                <p class="tagName">${type}</p>
-            </div>
-            </div>
+        <div class="like ">
+        <div class="icon"><i class="heart ${displayLiked} fa-heart"></i></div>
+    </div>
             <div class="logiciel-items">
                 <div class="fond ${log}">
                     <p class="text">${logiciel}</p>
@@ -98,6 +99,13 @@ function displayData(datas){
         </div>
     </li>
         `;
+
+        //Travailler dans la boucle, chercher DATA
+        const portfolioItem = document.querySelectorAll('.portfolio-item')
+        portfolioItem[data].style.backgroundImage = `url('${image}')`
+        portfolioItem[data].style.backgroundSize = "cover"
+        
+
 
         //console.log('icone'+ramdom)
     //    document.querySelector('#icone'+ramdom).appendChild(icone)
