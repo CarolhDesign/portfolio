@@ -1,12 +1,12 @@
 [
-    {
-        "id": 0,
-        "title":"Bald Woman",
-        "type":"Vectoriel",
-        "isLiked":"true",
-        "isNew": "true",
-        "logiciel": "AI",
-        "image":"images/1.jpg"
+        {
+            "id": 0,
+            "title":"Bald Woman",
+            "type":"Vectoriel",
+            "isLiked":"true",
+            "isNew": "true",
+            "logiciel": ["AI", "PS"],
+            "image":"images/1.jpg"
         },
         {
             "id": 1,
@@ -15,15 +15,15 @@
             "isLiked":"false",
             "isNew": "false",
             "logiciel":"PS",
-            "image":"http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcQQ8vvOU82XpxdeMZMA8SMdddCXafmV2Ekc1MlCvXbl4tkZlT-6_IMEe8kQZsEKhBdSjAyg7ub3ORRcbVvM3x4"
-            },
-            {
-                "id": 2,
-                "title":"Je suis un titre",
-                "type":"Logo",
-                "isLiked":"false",
-                "isNew": "true",
-                "logiciel":"Affinity Designer",
-                "image":"http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRtsun2B92hWkPymEN2lImcwCO7YhH5Y-so0CS0VjhPCKzp1tGsxcLKAugBOM0O1ma1SW8Z7RnXFOE-XnbMEVM"
-                }
+            "image":"images/1.jpg"
+        },
+        {
+            "id": 2,
+            "title":"Je suis un titre",
+            "type":"Logo",
+            "isLiked":"false",
+            "isNew": "true",
+            "logiciel": "PS",
+            "image":"images/1.jpg"
+        }
 ]

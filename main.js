@@ -1,5 +1,5 @@
 const parent = document.querySelector('.portfolio-header')
-
+let logicielArray = []
 const url = "article.json"
 fetch(url)
 .then(response => response.json())
@@ -34,10 +34,12 @@ function displayData(datas){
         let visible =  'hidden'
         const displayLiked = isLiked == 'true' ?  'fa-solid' : 'fa-regular'
 
+
       //Verifier si new Post
             if(isNew == "true"){
                 visible = 'visible'
             }
+
 
         // Vérifier Logiciels
 
@@ -53,8 +55,9 @@ function displayData(datas){
             log = "afpublisher"
         } else {
             log = "hidden"
-        }
+        }    
        
+
         //Vérifier Types
 
         if(type == "Logo"){
@@ -64,7 +67,7 @@ function displayData(datas){
         } else if (type == "Vectoriel"){
             tag = "vector"
         } else {
-            log = "hidden"
+            tag = "hidden"
         }
 
         ul.innerHTML += `
@@ -92,13 +95,36 @@ function displayData(datas){
         <div class="icon"><i class="heart ${displayLiked} fa-heart"></i></div>
     </div>
             <div class="logiciel-items">
-                <div class="fond ${log}">
-                    <p class="text">${logiciel}</p>
-                </div>
+            <div class="fond ${log}">
+            <p class="text">${logiciel}</p>
+        </div>
             </div>
         </div>
     </li>
         `;
+
+    
+
+        //Voir avec Ahmed
+
+        const boxLogiciel = document.querySelectorAll('.logiciel-items')
+
+        if(logiciel.length < 2){
+            boxLogiciel[data].innerHTML = `
+            <div class="fond ${log}">
+            <p class="text">${logiciel}</p>
+            </div>
+            `  
+        } else {
+            for(logi in logiciel.length){
+                boxLogiciel[logi].innerHTML += `
+                <div class="fond ${log}">
+                <p class="text">${logiciel}</p>
+                </div>
+                `  
+            }
+        }
+        
 
         //Travailler dans la boucle, chercher DATA
         const portfolioItem = document.querySelectorAll('.portfolio-item')

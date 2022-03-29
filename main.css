@@ -97,7 +97,7 @@
 
 .portfolio-footer {
   position: relative;
-  top: 70%;
+  top: 60%;
 }
 
 .hidden {
@@ -171,11 +171,10 @@
 }
 
 .tagFond {
-  width: 60px;
   height: auto;
   color: white;
   background-color: grey;
-  padding: 4px;
+  padding: 10px;
 }
 
 .logo {
