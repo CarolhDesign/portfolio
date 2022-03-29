@@ -34,7 +34,6 @@ function displayData(datas){
         let visible =  'hidden'
         const displayLiked = isLiked == 'true' ?  'fa-solid' : 'fa-regular'
 
-
       //Verifier si new Post
             if(isNew == "true"){
                 visible = 'visible'
@@ -102,8 +101,6 @@ function displayData(datas){
         </div>
     </li>
         `;
-
-    
 
         //Voir avec Ahmed
 
