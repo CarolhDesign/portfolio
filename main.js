@@ -1,5 +1,5 @@
 const parent = document.querySelector('.portfolio-header')
-let logicielArray = []
+let logShow
 const url = "article.json"
 fetch(url)
 .then(response => response.json())
@@ -93,15 +93,25 @@ function displayData(datas){
         <div class="like ">
         <div class="icon"><i class="heart ${displayLiked} fa-heart"></i></div>
     </div>
-            <div class="logiciel-items">
-            <div class="fond ${log}">
-            <p class="text">${logiciel}</p>
+        <div class="logicielUL">
+        <div class="logiciel-items ${logShow}">
+        <div class="fond ${log}">
+        <p class="text">${logiciel}</p>
+        </div>
         </div>
         
             </div>
         </div>
     </li>
         `;
+
+        if(logiciel >= 2){
+            logShow = "hidden";
+        } else {
+            logShow = "visible"
+        }
+
+
 
 
         //Travailler dans la boucle, chercher DATA
