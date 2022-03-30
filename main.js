@@ -21,7 +21,7 @@ function displayData(datas){
     const ul = document.querySelector('.folio')
 
     for(data in datas){
-
+ 
         // On créer une boucle for in pour parcourir les index du tableau d'objet.
         // Ensuite, on créer les variables pour une meilleure accessibilité et lisibilité du code
         let titre = datas[data].title
@@ -30,32 +30,35 @@ function displayData(datas){
         let type = datas[data].type
         let isLiked = datas[data].isLiked
         let isNew = datas[data].isNew
-        let logiciel = datas[data].logiciel
+        let logiciel = typeof datas[data].logiciel == "object" ? datas[data].logiciel : [datas[data].logiciel]
         let visible =  'hidden'
         const displayLiked = isLiked == 'true' ?  'fa-solid' : 'fa-regular'
-
+console.log(logiciel);
       //Verifier si new Post
             if(isNew == "true"){
                 visible = 'visible'
             }
 
-
-        // Vérifier Logiciels
-
-        if(logiciel == "AI"){
+        const displayLogiciel = logiciel.map(element=>{ 
+            if(element == "AI"){
             log = 'ai'
-        } else if (logiciel == "PS"){
+        } else if (element == "PS"){
             log = 'ps'
-        } else if (logiciel == "In"){
+        } else if (element == "In"){
             log = "in"
-        } else if(logiciel == "Affinity Designer"){
+        } else if(element == "Affinity Designer"){
             log = "afdesigner"
-        } else if (logiciel == "Affinity Publisher"){
+        } else if (element == "Affinity Publisher"){
             log = "afpublisher"
         } else {
             log = "hidden"
         }    
-       
+            return `
+                <div class="fond ${log}">
+                <p class="text">${element}</p>
+            `
+
+        })  
 
         //Vérifier Types
 
@@ -94,12 +97,10 @@ function displayData(datas){
         <div class="icon"><i class="heart ${displayLiked} fa-heart"></i></div>
     </div>
         <div class="logicielUL">
-        <div class="logiciel-items ${logShow}">
-        <div class="fond ${log}">
-        <p class="text">${logiciel}</p>
+        <div class="logiciel-items">
+        ${displayLogiciel.join("")}
         </div>
         </div>
-        
             </div>
         </div>
     </li>

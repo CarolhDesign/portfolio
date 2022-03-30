@@ -14,7 +14,7 @@
             "type":"Logo",
             "isLiked":"false",
             "isNew": "false",
-            "logiciel":"PS",
+            "logiciel":["AI"],
             "image":"images/1.jpg"
         },
         {

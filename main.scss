@@ -43,6 +43,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .blocNew{
     text-align: center;
     display: flex;
@@ -71,28 +72,25 @@
     visibility: visible;
 }
 
-.logiciels-items{
+.logiciel-items{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
-    flex-basis: 100%;
     position: relative;
 }
 
 .fond{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: gray;
     position: relative;
     bottom:0;
     right: 0;
-    padding: 35px;
-    width: 30px;
-    height:30px;
+    width: 50px;
+    height:50px;
     color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .ai{
