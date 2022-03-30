@@ -97,31 +97,12 @@ function displayData(datas){
             <div class="fond ${log}">
             <p class="text">${logiciel}</p>
         </div>
+        
             </div>
         </div>
     </li>
         `;
 
-        //Voir avec Ahmed
-
-        const boxLogiciel = document.querySelectorAll('.logiciel-items')
-
-        if(logiciel.length < 2){
-            boxLogiciel[data].innerHTML = `
-            <div class="fond ${log}">
-            <p class="text">${logiciel}</p>
-            </div>
-            `  
-        } else {
-            for(logi in logiciel.length){
-                boxLogiciel[logi].innerHTML += `
-                <div class="fond ${log}">
-                <p class="text">${logiciel}</p>
-                </div>
-                `  
-            }
-        }
-        
 
         //Travailler dans la boucle, chercher DATA
         const portfolioItem = document.querySelectorAll('.portfolio-item')

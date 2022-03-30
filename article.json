@@ -5,7 +5,10 @@
             "type":"Vectoriel",
             "isLiked":"true",
             "isNew": "true",
-            "logiciel": ["AI", "PS"],
+            "logiciel": {
+                "1" : "AI",
+                "2" : "PS"
+            },
             "image":"images/1.jpg"
         },
         {
