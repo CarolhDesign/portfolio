@@ -23,8 +23,9 @@
 #header{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    width:100%;
+    flex-basis:100%;
 }
 .featured{
     background-color: red;
@@ -42,6 +43,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding:20px;
 }
 
 .blocNew{
@@ -77,6 +79,7 @@
     flex-direction: row;
     justify-content: space-around;
     position: relative;
+    margin-left: 11px;
 }
 
 .fond{
@@ -91,6 +94,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    border-radius:10%;
 }
 
 .ai{
@@ -115,10 +119,13 @@
 }
 
 .tagFond{
+    display:flex;
     height:auto;
     color:white;
     background-color: grey;
     padding: 10px;
+    border-radius:10%;
+    flex-basis:100%;
 }
 
 .logo{
@@ -143,4 +150,17 @@
 .heart{
     font-size: 30px;
     color:white;
+}
+
+.tag{
+    display: flex;
+    flex-direction: row;
+    margin-left:10px;
+    flex-basis:100%;
+}
+
+.divider{
+    width: 100%;
+    height: 2px;
+    background-color: white;
 }

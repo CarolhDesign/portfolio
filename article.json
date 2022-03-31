@@ -2,7 +2,7 @@
         {
             "id": 0,
             "title":"Bald Woman",
-            "type":"Vectoriel",
+            "type":["Vectoriel"],
             "isLiked":"true",
             "isNew": "true",
             "logiciel": ["AI", "PS"],
@@ -11,19 +11,19 @@
         {
             "id": 1,
             "title":"Je suis un titre",
-            "type":"Logo",
+            "type":["Logo"],
             "isLiked":"false",
             "isNew": "false",
             "logiciel":["AI"],
-            "image":"images/1.jpg"
+            "image":"images/2.jpg"
         },
         {
             "id": 2,
-            "title":"Je suis un titre",
-            "type":"Logo",
+            "title":"Je",
+            "type":["Compositing"],
             "isLiked":"false",
-            "isNew": "true",
-            "logiciel": "PS",
-            "image":"images/1.jpg"
+            "isNew": "false",
+            "logiciel":["AI", "In"],
+            "image":"images/3.jpg"
         }
 ]
