@@ -93,32 +93,36 @@ function displayData(datas){
         <li class="portfolio-item">
 
         <div id="header">
+        
             <div class="new-item">
                   <div class="blocNew ${visible}">
                         <h2>Nouveauté</h2>
                   </div>
+
                   </div>
                   <div class="typeUL">
-                    ${displayTag.join("")}
-                  </div>
+                  ${displayTag.join("")}
+              </div>
             </div>
 
             <div class="portfolio-content">
                 <div class="title">${titre}</div>
             </div>
         </div>
-        <div class="divider"></div>
 
         <div class="portfolio-footer">
+
         <div class="like ">
-        <div class="icon"><i class="heart ${displayLiked} fa-heart"></i></div>
-    </div>
+            <div class="icon"><i class="heart ${displayLiked} fa-heart"></i></div>
+        </div>
+
         <div class="logicielUL">
             ${displayLogiciel.join("")}
         </div>
-            </div>
-        </div>
-    </li>
+
+    </div>
+ </div>
+</li>
         `;
 
         //Travailler dans la boucle, chercher DATA
