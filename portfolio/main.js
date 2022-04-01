@@ -1,4 +1,6 @@
 const parent = document.querySelector('.portfolio-header')
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
 
 const url = "article.json"
 fetch(url)
@@ -35,6 +37,11 @@ function displayData(datas){
         let visible =  'hidden'
         const displayLiked = isLiked == 'true' ?  'fa-solid' : 'fa-regular'
 
+        //Function single post template 
+        function openPost(){
+            window.open(`posts.html?id=${id}`);
+        }
+        
         //Verifier si new Post
 
         if(isNew == "true"){
@@ -129,7 +136,8 @@ function displayData(datas){
         const portfolioItem = document.querySelectorAll('.portfolio-item')
         portfolioItem[data].style.backgroundImage = `url('${image}')`
         portfolioItem[data].style.backgroundSize = "cover"
-        
+        portfolioItem[data].addEventListener('click', openPost)
+
         //console.log('icone'+ramdom)
     //    document.querySelector('#icone'+ramdom).appendChild(icone)
     //     ramdom++ 
@@ -143,3 +151,5 @@ function displayData(datas){
 /*
     //Faire LocalStorage, et après Firebase
  */
+
+    
