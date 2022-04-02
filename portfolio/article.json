@@ -1,15 +1,15 @@
 [
         {
-            "id": 0,
+            "id": 34,
             "title":"Bald Woman",
             "type":["Vectoriel"],
             "isLiked":"true",
-            "isNew": "true",
+            "isNew": "false",
             "logiciel": ["AI", "PS"],
             "image":"images/1.jpg"
         },
         {
-            "id": 1,
+            "id": 10,
             "title":"Je suis un titre",
             "type":["Logo"],
             "isLiked":"false",

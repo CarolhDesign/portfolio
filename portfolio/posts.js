@@ -14,7 +14,6 @@ async function displayContentPage(datas) {
 
     datas.forEach(data => {
         let titre = data.title
-        let id = data.id
         let image = data.image
         let type = data.type
         let isLiked = data.isLiked
@@ -30,3 +29,5 @@ async function displayContentPage(datas) {
         }
     });
 };
+
+

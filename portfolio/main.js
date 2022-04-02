@@ -42,6 +42,9 @@ function displayData(datas){
             window.open(`posts.html?id=${id}`);
         }
         
+        //faire les filtres
+        // afficher toutes les images en lightbox ( via filtre )
+        
         //Verifier si new Post
 
         if(isNew == "true"){
@@ -73,6 +76,7 @@ function displayData(datas){
     
         })  
 
+        //Destiné a modifier la valeur d'un tableau ( transforme en html / log)
         const displayLogiciel = logiciel.map(element=>{ 
             if(element == "AI"){
             log = 'ai'
@@ -95,6 +99,8 @@ function displayData(datas){
             `
 
         })  
+
+        //ajouter class pour style CSS
 
         ul.innerHTML += `
         <li class="portfolio-item">
