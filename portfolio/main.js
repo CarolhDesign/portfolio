@@ -37,7 +37,7 @@ function displayData(datas){
         let visible =  'hidden'
         const displayLiked = isLiked == 'true' ?  'fa-solid' : 'fa-regular'
 
-        //Function single post template 
+        //Function single post template : ici bug fonctionne que sur le 3eme
         function openPost(){
             window.open(`posts.html?id=${id}`);
         }
