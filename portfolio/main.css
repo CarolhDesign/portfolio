@@ -242,4 +242,44 @@
   font-size: 20px;
   padding-left: 20px;
 }
+
+a {
+  text-decoration: none;
+}
+
+#myBtnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#myBtnContainer .btn {
+  height: auto;
+  padding: 10px 25px;
+  background-color: grey;
+  border: none;
+  border-radius: 5%;
+  color: white;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+#myBtnContainer .btn:hover {
+  background-color: blueviolet;
+  color: white;
+}
+
+#myBtnContainer .active {
+  background-color: blueviolet;
+  color: white;
+}
 /*# sourceMappingURL=main.css.map */

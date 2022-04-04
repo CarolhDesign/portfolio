@@ -168,3 +168,36 @@
     font-size:20px;
     padding-left: 20px;
 }
+a{
+    text-decoration: none;
+}
+
+#myBtnContainer {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+
+
+    .btn {
+        height: auto;
+        padding: 10px 25px;
+        background-color: grey;
+        border:none;
+        border-radius: 5%;
+        color: white;
+        transition: all 0.5s ease-in;
+
+        &:hover{
+            background-color:blueviolet;
+            color:white;
+        }
+
+    }
+
+    .active {
+        background-color: blueviolet;
+        color:white;
+    }
+}

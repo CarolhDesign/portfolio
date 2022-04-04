@@ -5,7 +5,9 @@ const id = urlParams.get("id");
 const url = "article.json"
 fetch(url)
 .then(response => response.json())
-.then(datas => displayData(datas))
+.then(datas => {
+    displayData(datas)
+})
 
 //let ramdom = 0
 
@@ -17,13 +19,14 @@ document.querySelector('body').addEventListener('click', (e) => {
     
     }  
 });
- 
+
+
 
 function displayData(datas){
     const ul = document.querySelector('.folio')
-
+    ul.innerHTML = ""
     for(data in datas){
- 
+
         // On créer une boucle for in pour parcourir les index du tableau d'objet.
         // Ensuite, on créer les variables pour une meilleure accessibilité et lisibilité du code
 
@@ -36,11 +39,6 @@ function displayData(datas){
         let logiciel = typeof datas[data].logiciel == "object" ? datas[data].logiciel : [datas[data].logiciel]
         let visible =  'hidden'
         const displayLiked = isLiked == 'true' ?  'fa-solid' : 'fa-regular'
-
-        //Function single post template : ici bug fonctionne que sur le 3eme
-        function openPost(){
-            window.open(`posts.html?id=${id}`);
-        }
         
         //faire les filtres
         // afficher toutes les images en lightbox ( via filtre )
@@ -100,9 +98,11 @@ function displayData(datas){
 
         })  
 
+
         //ajouter class pour style CSS
 
         ul.innerHTML += `
+        <a class="itemBox" data-filter="${type}" href="posts.html?id=${id}">
         <li class="portfolio-item">
 
         <div id="header">
@@ -136,18 +136,19 @@ function displayData(datas){
     </div>
  </div>
 </li>
+</a>
         `;
-
+  
         //Travailler dans la boucle, chercher DATA
         const portfolioItem = document.querySelectorAll('.portfolio-item')
         portfolioItem[data].style.backgroundImage = `url('${image}')`
         portfolioItem[data].style.backgroundSize = "cover"
-        portfolioItem[data].addEventListener('click', openPost)
 
         //console.log('icone'+ramdom)
     //    document.querySelector('#icone'+ramdom).appendChild(icone)
     //     ramdom++ 
 
+    
     }// Fin boucle For
 
 
