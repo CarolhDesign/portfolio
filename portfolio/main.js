@@ -1,12 +1,12 @@
 const parent = document.querySelector('.portfolio-header')
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
-let filteredData;
-
+let allDatas
 const url = "article.json"
 fetch(url)
 .then(response => response.json())
 .then(datas => {
+    allDatas = datas
     displayData(datas)
 })
 
@@ -14,6 +14,10 @@ fetch(url)
 
 document.querySelector('body').addEventListener('click', (e) => {
            
+    if(e.target.closest('button')){
+        filteredData(allDatas, e.target.textContent);
+    }
+
     if(e.target.classList.contains('heart')){
      e.target.classList.toggle('fa-solid')
      e.target.classList.toggle('fa-regular')
@@ -158,13 +162,12 @@ function displayData(datas){
     
     }// Fin boucle For
 
-    function filteredData(datas, condition){
-        const result = datas.filter(data => data.type == condition);
-    }
-
 }
 
-
+function filteredData(datas, condition){
+    const result = datas.filter(data => data.type == condition);
+    displayData(result)
+}
 /*
     //Faire LocalStorage, et après Firebase
  */
