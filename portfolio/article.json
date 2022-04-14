@@ -2,10 +2,10 @@
         {
             "id": 34,
             "title":"Bald Woman",
-            "type":["Vectoriel"],
-            "isLiked":"true",
-            "isNew": "false",
-            "logiciel": ["AI", "PS"],
+            "type":["Logo"],
+            "isLiked":"false",
+            "isNew": "true",
+            "logiciel": ["In", "PS"],
             "image":"images/1.jpg"
         },
         {

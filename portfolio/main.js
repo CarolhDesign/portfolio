@@ -1,6 +1,7 @@
 const parent = document.querySelector('.portfolio-header')
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
+let filteredData;
 
 const url = "article.json"
 fetch(url)
@@ -21,7 +22,6 @@ document.querySelector('body').addEventListener('click', (e) => {
 });
 
 
-
 function displayData(datas){
     const ul = document.querySelector('.folio')
     ul.innerHTML = ""
@@ -36,6 +36,7 @@ function displayData(datas){
         let type = datas[data].type
         let isLiked = datas[data].isLiked
         let isNew = datas[data].isNew
+        let condition = data.type
         let logiciel = typeof datas[data].logiciel == "object" ? datas[data].logiciel : [datas[data].logiciel]
         let visible =  'hidden'
         const displayLiked = isLiked == 'true' ?  'fa-solid' : 'fa-regular'
@@ -53,12 +54,17 @@ function displayData(datas){
             
                 if(elem == "Logo"){
                     tag = 'logo'
+                    condition = 'Logo'
                 } else if (elem == "Web"){
                     tag = 'web'
+                    condition = 'Web'
                 } else if (elem == "Vectoriel"){
                     tag = "vector"
+                    condition = 'Vector'
+
                 } else if(elem == "Compositing"){
                     tag = "compositing"
+                    condition = 'Compositing'
                 }else {
                     tag = "hidden"
                 }  
@@ -99,10 +105,11 @@ function displayData(datas){
         })  
 
 
+  
         //ajouter class pour style CSS
 
         ul.innerHTML += `
-        <a class="itemBox" data-filter="${type}" href="posts.html?id=${id}">
+        <a class="itemBox ${type}" href="posts.html?id=${id}">
         <li class="portfolio-item">
 
         <div id="header">
@@ -151,6 +158,9 @@ function displayData(datas){
     
     }// Fin boucle For
 
+    function filteredData(datas, condition){
+        const result = datas.filter(data => data.type == condition);
+    }
 
 }
 
