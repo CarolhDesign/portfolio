@@ -14,6 +14,8 @@ fetch(url)
 
 document.querySelector('body').addEventListener('click', (e) => {
            
+    // Events pour les boutons et les filtres
+    // Le bouton le plus proche : closest('button')
     if(e.target.closest('button')){
         filteredData(allDatas, e.target.textContent);
     }
